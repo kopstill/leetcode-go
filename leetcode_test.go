@@ -74,3 +74,14 @@ func TestAddTwoNumbers2(t *testing.T) {
 		}
 	}
 }
+
+func TestLengthOfLongestSubstring(t *testing.T) {
+	// s := "你你好，,世界！"
+	// s := "abcabcbb"
+	// s := "bbbbb"
+	// s := "pwwkew"
+	// s := "dvdf"
+	// s := " "
+	s := ""
+	fmt.Println(lengthOfLongestSubstring(s))
+}
