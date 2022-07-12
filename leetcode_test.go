@@ -83,5 +83,5 @@ func TestLengthOfLongestSubstring(t *testing.T) {
 	// s := "dvdf"
 	// s := " "
 	s := ""
-	fmt.Println(lengthOfLongestSubstring(s))
+	fmt.Println(lengthOfLongestSubstring1(s))
 }

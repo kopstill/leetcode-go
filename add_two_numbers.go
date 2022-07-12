@@ -5,6 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// 使用递归（栈）
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	num := 0
 
@@ -39,6 +40,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 }
 
+// 使用轮询
 func addTwoNumbers1(l1 *ListNode, l2 *ListNode) (result *ListNode) {
 	result = &ListNode{0, nil}
 	temp := result
@@ -73,6 +75,7 @@ func addTwoNumbers1(l1 *ListNode, l2 *ListNode) (result *ListNode) {
 	return result.Next
 }
 
+// 官方解法（轮询）
 func addTwoNumbers2(l1, l2 *ListNode) (head *ListNode) {
 	var tail *ListNode
 	carry := 0
