@@ -1,6 +1,9 @@
 package leetcode
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func mergeWithoutMandN(nums1 []int, m int, nums2 []int, n int) {
 	for i := 0; i < len(nums2); i++ {
@@ -22,4 +25,9 @@ func mergeWithoutMandN(nums1 []int, m int, nums2 []int, n int) {
 	}
 
 	fmt.Println(nums1)
+}
+
+func merge(nums1 []int, m int, nums2 []int, n int) {
+	copy(nums1[m:], nums2)
+	sort.Ints(nums1)
 }
