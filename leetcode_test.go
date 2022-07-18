@@ -102,6 +102,12 @@ func TestFindMedianSortedArrays(t *testing.T) {
 	fmt.Println(findMedianSortedArrays(nums1, nums2))
 }
 
+func TestFindMedianSortedArrays1(t *testing.T) {
+	nums1 := []int{1, 3, 4, 9}
+	nums2 := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	fmt.Println(findMedianSortedArrays1(nums1, nums2))
+}
+
 func TestMergeSortedArray(t *testing.T) {
 	// nums1 := []int{1, 3}
 	// nums2 := []int{2}
