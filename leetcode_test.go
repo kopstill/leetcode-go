@@ -129,3 +129,13 @@ func TestMergeSortedArray(t *testing.T) {
 	// nums1 = append(nums1[:1], append([]int{nums2[0]}, nums1[1:]...)...)
 	// fmt.Println(nums1)
 }
+
+func TestLongestPalindrome(t *testing.T) {
+	// s := "kxacorrocbzx"
+	// s := "cbbd"
+	// s := "x"
+	// s := "ac"
+	s := "bacabab"
+	r := longestPalindrome(s)
+	fmt.Println(r)
+}
