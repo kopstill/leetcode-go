@@ -1,5 +1,8 @@
+// 1: https://leetcode.cn/problems/two-sum/
 package leetcode
 
+// 时间复杂度：O(n²)
+// 空间复杂度：O(1)
 func twoSum(nums []int, target int) []int {
 	length := len(nums)
 
@@ -15,6 +18,8 @@ func twoSum(nums []int, target int) []int {
 }
 
 // 官方解法
+// 时间复杂度：O(n²)
+// 空间复杂度：O(1)
 func twoSum1(nums []int, target int) []int {
 	for i, x := range nums {
 		for j := i + 1; j < len(nums); j++ {

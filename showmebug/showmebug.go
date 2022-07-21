@@ -1,3 +1,6 @@
+/*
+	https://www.showmebug.com/
+*/
 package showmebug
 
 type DirType string
