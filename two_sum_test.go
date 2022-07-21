@@ -18,3 +18,10 @@ func Test1TwoSum(t *testing.T) {
 	result := twoSum1(nums, target)
 	fmt.Println(result)
 }
+
+func Test2TwoSum(t *testing.T) {
+	nums := []int{32, 68, 51, 93, 25, 80, 19}
+	target := 99
+	result := twoSum2(nums, target)
+	fmt.Println(result)
+}
