@@ -121,7 +121,7 @@ func convert2(s string, numRows int) string {
 	return string(ans)
 }
 
-// 压缩矩阵空间
+// 官方解法 2：压缩矩阵空间
 // 时间复杂度：O(n)
 // 空间复杂度：O(n)。压缩后的矩阵需要 O(n) 的空间。
 func convert3(s string, numRows int) string {
