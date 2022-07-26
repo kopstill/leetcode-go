@@ -120,3 +120,24 @@ func convert2(s string, numRows int) string {
 	}
 	return string(ans)
 }
+
+// 压缩矩阵空间
+// 时间复杂度：O(n)
+// 空间复杂度：O(n)。压缩后的矩阵需要 O(n) 的空间。
+func convert3(s string, numRows int) string {
+	r := numRows
+	if r == 1 || r >= len(s) {
+		return s
+	}
+	mat := make([][]byte, r)
+	t, x := r*2-2, 0
+	for i, ch := range s {
+		mat[x] = append(mat[x], byte(ch))
+		if i%t < r-1 {
+			x++
+		} else {
+			x--
+		}
+	}
+	return string(bytes.Join(mat, nil))
+}
