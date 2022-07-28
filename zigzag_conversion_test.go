@@ -32,3 +32,9 @@ func Test3ZigZagConversion(t *testing.T) {
 	numRows := 7
 	fmt.Println(convert3(s, numRows))
 }
+
+func Test4ZigZagConversion(t *testing.T) {
+	s := "SOMEBODYTHATIUSEDTOKNOW"
+	numRows := 4
+	fmt.Println(convert4(s, numRows))
+}
