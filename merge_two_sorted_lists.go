@@ -7,7 +7,7 @@ package leetcode
 // }
 
 // 时间复杂度：O(m+n)
-// 空间复杂度：O(1)
+// 空间复杂度：O(m+n)，迭代会产生新链表节点临时变量
 func mergeTwoSortedLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	result := &ListNode{0, nil}
 	tail := result
