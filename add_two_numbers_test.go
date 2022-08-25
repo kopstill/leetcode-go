@@ -16,13 +16,9 @@ func TestAddTwoNumbers(t *testing.T) {
 	// l2 := ListNode{9, &ListNode{9, &ListNode{9, &ListNode{9, nil}}}}
 
 	result := addTwoNumbers(&l1, &l2)
-	for {
+	for result != nil {
 		fmt.Println(result.Val)
-		if result.Next != nil {
-			result = result.Next
-		} else {
-			break
-		}
+		result = result.Next
 	}
 }
 
@@ -37,13 +33,9 @@ func Test1AddTwoNumbers(t *testing.T) {
 	// l2 := ListNode{9, &ListNode{9, &ListNode{9, &ListNode{9, nil}}}}
 
 	result := addTwoNumbers1(&l1, &l2)
-	for {
+	for result != nil {
 		fmt.Println(result.Val)
-		if result.Next != nil {
-			result = result.Next
-		} else {
-			break
-		}
+		result = result.Next
 	}
 }
 
@@ -58,12 +50,8 @@ func Test2AddTwoNumbers(t *testing.T) {
 	l2 := ListNode{9, &ListNode{9, &ListNode{9, &ListNode{9, nil}}}}
 
 	result := addTwoNumbers2(&l1, &l2)
-	for {
+	for result != nil {
 		fmt.Println(result.Val)
-		if result.Next != nil {
-			result = result.Next
-		} else {
-			break
-		}
+		result = result.Next
 	}
 }
