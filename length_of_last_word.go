@@ -2,7 +2,7 @@
 package leetcode
 
 // 先去除末尾空格，然后计算末尾非空格字符数
-// 时间复杂度：O(2n)
+// 时间复杂度：O(n)
 // 空间复杂度：O(1)
 func lengthOfLastWord(s string) int {
 	n := len(s)
@@ -21,4 +21,19 @@ func lengthOfLastWord(s string) int {
 	}
 
 	return n
+}
+
+// 反向遍历
+// 时间复杂度：O(n)
+// 空间复杂度：O(1)
+func lengthOfLastWord1(s string) (ans int) {
+	index := len(s) - 1
+	for s[index] == ' ' {
+		index--
+	}
+	for index >= 0 && s[index] != ' ' {
+		ans++
+		index--
+	}
+	return
 }
