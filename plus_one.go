@@ -50,3 +50,19 @@ func plusOne1(digits []int) []int {
 	digits[0] = 1
 	return digits
 }
+
+// 直接将末尾的 9 改成 0
+// 时间复杂度：O(n)
+// 空间复杂度：O(1)
+func plusOne2(digits []int) []int {
+	n := len(digits)
+	for i := n - 1; i >= 0; i-- {
+		if digits[i] == 9 {
+			digits[i] = 0
+		} else {
+			digits[i]++
+			return digits
+		}
+	}
+	return append([]int{1}, digits...)
+}
