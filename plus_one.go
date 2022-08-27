@@ -1,6 +1,7 @@
 // 66: https://leetcode.cn/problems/plus-one/
 package leetcode
 
+// 逆向遍历
 // 时间复杂度：O(n)
 // 空间复杂度：O(1)
 func plusOne(digits []int) []int {
@@ -28,4 +29,24 @@ func plusOne(digits []int) []int {
 	}
 
 	return result
+}
+
+// 逆向找到第一个不为 9 的数
+// 时间复杂度：O(n)
+// 空间复杂度：O(1)
+func plusOne1(digits []int) []int {
+	n := len(digits)
+	for i := n - 1; i >= 0; i-- {
+		if digits[i] != 9 {
+			digits[i]++
+			for j := i + 1; j < n; j++ {
+				digits[j] = 0
+			}
+			return digits
+		}
+	}
+
+	digits = make([]int, n+1)
+	digits[0] = 1
+	return digits
 }
