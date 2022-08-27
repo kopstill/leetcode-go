@@ -31,3 +31,21 @@ func removeElement1(nums []int, val int) int {
 
 	return left
 }
+
+// 双指针优化：至多遍历一次 nums
+// 时间复杂度：O(n)
+// 空间复杂度：O(1)
+func removeElement2(nums []int, val int) int {
+	left, right := 0, len(nums)
+
+	for left < right {
+		if nums[left] == val {
+			nums[left] = nums[right-1]
+			right--
+		} else {
+			left++
+		}
+	}
+
+	return left
+}

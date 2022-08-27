@@ -20,3 +20,10 @@ func Test1RemoveElement(t *testing.T) {
 	fmt.Println(removeElement1(nums, val))
 	fmt.Println(nums)
 }
+
+func Test2RemoveElement(t *testing.T) {
+	nums := []int{1, 2, 3, 4, 5, 1, 1, 9, 8, 7, 1}
+	val := 1
+	fmt.Println(removeElement2(nums, val))
+	fmt.Println(nums)
+}
