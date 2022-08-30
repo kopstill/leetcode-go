@@ -22,3 +22,20 @@ func strStr(haystack string, needle string) int {
 	}
 	return -1
 }
+
+// 暴力匹配
+// 时间复杂度：O(n*m)，其中 n 是字符串 haystack 的长度，m 是字符串 needle 的长度。最坏情况下我们需要将字符串 needle 与字符串 haystack 的所有长度为 m 的子串均匹配一次。
+// 空间复杂度：O(1)。我们只需要常数的空间保存若干变量。
+func strStr1(haystack, needle string) int {
+	n, m := len(haystack), len(needle)
+outer:
+	for i := 0; i+m <= n; i++ {
+		for j := range needle {
+			if haystack[i+j] != needle[j] {
+				continue outer
+			}
+		}
+		return i
+	}
+	return -1
+}
