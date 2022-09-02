@@ -20,3 +20,14 @@ func checkIfPangram(sentence string) bool {
 
 	return len(alphabet) == 0
 }
+
+// 位运算
+// 时间复杂度：O(n)
+// 空间复杂度：O(1)
+func checkIfPangram1(s string) bool {
+	m := 0
+	for _, b := range s {
+		m |= 1 << (b - 'a')
+	}
+	return m == 1<<26-1
+}
