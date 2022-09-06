@@ -47,3 +47,30 @@ func addBinary(a string, b string) string {
 
 	return res
 }
+
+// 官方：模拟
+// 复杂度分析
+// 假设 n = max{|a|,|b|}。
+// 时间复杂度：O(n)，这里的时间复杂度来源于顺序遍历 a 和 b。
+// 空间复杂度：O(1)，除去答案所占用的空间，这里使用了常数个临时变量。
+func addBinary1(a, b string) string {
+	ans := ""
+	carry := 0
+	lenA, lenB := len(a), len(b)
+	n := max(lenA, lenB)
+
+	for i := 0; i < n; i++ {
+		if i < lenA {
+			carry += int(a[lenA-i-1] - '0')
+		}
+		if i < lenB {
+			carry += int(b[lenB-i-1] - '0')
+		}
+		ans = strconv.Itoa(carry%2) + ans
+		carry /= 2
+	}
+	if carry > 0 {
+		ans = "1" + ans
+	}
+	return ans
+}
