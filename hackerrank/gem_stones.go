@@ -1,4 +1,4 @@
-// https://www.hackerrank.com/x/tests/545682/candidates/44199341/report
+// https://www.hackerrank.com/
 package hackerrank
 
 // 时间复杂度：O(n*m)
