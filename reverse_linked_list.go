@@ -21,9 +21,9 @@ func reverseList(head *ListNode) *ListNode {
 // 空间复杂度：O(n)
 func reverseList1(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
-		return nil
+		return head
 	}
-	newHead := reverseList(head.Next)
+	newHead := reverseList1(head.Next)
 	head.Next.Next = head
 	head.Next = nil
 	return newHead
