@@ -51,3 +51,27 @@ func validPalindrome1(s string) bool {
 func isalnum(ch byte) bool {
 	return (ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z') || (ch >= '0' && ch <= '9')
 }
+
+// 在原字符串上直接判断（官方解法）
+// 时间复杂度：O(|s|)，其中 |s∣ 是字符串 s 的长度。
+// 空间复杂度：O(1)
+func validPalindrome2(s string) bool {
+	s = strings.ToLower(s)
+	left, right := 0, len(s)-1
+	for left < right {
+		for left < right && !isalnum(s[left]) {
+			left++
+		}
+		for left < right && !isalnum(s[right]) {
+			right--
+		}
+		if left < right { // 此判断可要可不要
+			if s[left] != s[right] {
+				return false
+			}
+			left++
+			right--
+		}
+	}
+	return true
+}
