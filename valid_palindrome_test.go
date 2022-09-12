@@ -17,3 +17,8 @@ func TestValidPalindrome(t *testing.T) {
 	s := "0P"
 	fmt.Println(validPalindrome(s))
 }
+
+func Test1ValidPalindrome(t *testing.T) {
+	s := "A man, a plan, a canal: Panama"
+	fmt.Println(validPalindrome1(s))
+}
