@@ -16,7 +16,4 @@ func TestValidPalindrome(t *testing.T) {
 	// s := "A man, a plan, a canal: Panama"
 	s := "0P"
 	fmt.Println(validPalindrome(s))
-
-	fmt.Println('0')
-	fmt.Println('9')
 }
