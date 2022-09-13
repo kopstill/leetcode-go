@@ -16,3 +16,14 @@ func singleNumber(nums []int) int {
 	}
 	return -1
 }
+
+// 位运算：异或
+// 时间复杂度：O(n)
+// 空间复杂度：O(1)
+func singleNumber1(nums []int) int {
+	single := 0
+	for _, num := range nums {
+		single ^= num
+	}
+	return single
+}
