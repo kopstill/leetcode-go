@@ -4,6 +4,8 @@
 
 /* Write your MySQL query statement below */
 
+/* mysql: cross join == inner join == join */
+
 /* datediff */
 select a.id from weather a 
     cross join weather b 
