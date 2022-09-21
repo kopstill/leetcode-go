@@ -10,10 +10,10 @@
 select a.id from weather a 
     cross join weather b 
     on datediff(a.recordDate, b.recordDate) = 1 
-where a.temperature > b.temperature
+where a.temperature > b.temperature;
 
 /* timestampdiff */
 select a.id from weather a 
-    cross join weather b 
+    inner join weather b 
     on timestampdiff(day, a.recordDate, b.recordDate) = -1 
-where a.temperature > b.temperature
+where a.temperature > b.temperature;
