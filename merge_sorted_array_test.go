@@ -68,3 +68,19 @@ func Test2MergeSortedArray(t *testing.T) {
 	merge2(nums1, 3, nums2, 3)
 	fmt.Println(nums1)
 }
+
+func Test3MergeSortedArray(t *testing.T) {
+	// nums1 := []int{3, 6, 10, 23, 34, 99, 128, 0, 0, 0, 0, 0}
+	// nums2 := []int{56, 71, 103, 124, 255}
+	// merge3(nums1, 7, nums2, 5)
+
+	nums1 := []int{0}
+	nums2 := []int{1}
+	merge3(nums1, 0, nums2, 1)
+
+	// nums1 := []int{2, 0}
+	// nums2 := []int{1}
+	// merge3(nums1, 1, nums2, 1)
+
+	fmt.Println(nums1)
+}
