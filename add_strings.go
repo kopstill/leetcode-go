@@ -1,9 +1,11 @@
 // 415: https://leetcode.cn/problems/add-strings/
-
 package leetcode
 
 import "strconv"
 
+// 双指针
+// 时间复杂度：O(max(len1, len2))
+// 空间复杂度：O(1)
 func addStrings(num1 string, num2 string) string {
 	add := 0
 	ans := ""
