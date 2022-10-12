@@ -15,3 +15,8 @@ func Test1MajorityElement(t *testing.T) {
 	nums := []int{1}
 	fmt.Println(majorityElement1(nums))
 }
+
+func Test2MajorityElement(t *testing.T) {
+	nums := []int{8, 0, 8, 9, 7, 0, 8, 2, 8, 8, 9, 8, 6, 8}
+	fmt.Println(majorityElement2(nums))
+}
