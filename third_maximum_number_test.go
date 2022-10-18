@@ -20,3 +20,13 @@ func Test2ThirdMax(test *testing.T) {
 	nums := []int{3, 5, 1}
 	fmt.Println(thirdMax2(nums))
 }
+
+func Test3ThirdMax(test *testing.T) {
+	nums := []int{3, 1}
+	fmt.Println(thirdMax3(nums))
+}
+
+func Test4ThirdMax(test *testing.T) {
+	nums := []int{3, 2, 1, 1, 2, 3}
+	fmt.Println(thirdMax4(nums))
+}
