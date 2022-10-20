@@ -36,3 +36,24 @@ func longestPalindromeI(s string) int {
 
 	return result
 }
+
+// slice
+// 时间复杂度：O(n)。n 为字符串 s 的长度。
+// 空间复杂度：O(s)。s 为 slice 存储的大小。
+func longestPalindromeI1(s string) int {
+	count := [128]int{}
+	length := len(s)
+	for i := 0; i < length; i++ {
+		count[s[i]]++
+	}
+
+	ans := 0
+	for _, v := range count {
+		ans += v / 2 * 2
+		if v%2 == 1 && ans%2 == 0 {
+			ans++
+		}
+	}
+
+	return ans
+}
