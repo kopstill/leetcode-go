@@ -28,3 +28,9 @@ func Test2FindTheDifference(test *testing.T) {
 	t := "dddxxxibbbaaaccc"
 	fmt.Println(string(findTheDifference2(s, t)))
 }
+
+func Test3FindTheDifference(test *testing.T) {
+	s := "aaabbbcccxxxddd"
+	t := "dddxxxibbbaaaccc"
+	fmt.Println(string(findTheDifference3(s, t)))
+}
