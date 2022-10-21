@@ -47,3 +47,20 @@ func findTheDifference1(s, t string) byte {
 		}
 	}
 }
+
+// 求和
+// 将字符串 s 中每个字符的 ASCII 码的值求和，得到 As；
+// 对字符串 t 同样的方法得到 At。
+// 两者的差值 At − As 即代表了被添加的字符。
+// 时间复杂度：O(N)。
+// 空间复杂度：O(1)。
+func findTheDifference2(s, t string) byte {
+	sum := 0
+	for _, ch := range s {
+		sum -= int(ch)
+	}
+	for _, ch := range t {
+		sum += int(ch)
+	}
+	return byte(sum)
+}
