@@ -14,3 +14,11 @@ func TestFindTheDifference(test *testing.T) {
 	fmt.Println(result)
 	fmt.Println(string(result))
 }
+
+func Test1FindTheDifference(test *testing.T) {
+	// s := ""
+	// t := "y"
+	s := "asdfghj"
+	t := "fdghjasd"
+	fmt.Println(string(findTheDifference(s, t)))
+}
