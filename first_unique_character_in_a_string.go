@@ -23,9 +23,26 @@ func firstUniqChar(s string) int {
 
 // 数组计数
 func firstUniqChar1(s string) int {
-	count := [26]int{}
+	count := [26]byte{}
 	for i := 0; i < len(s); i++ {
 		count[s[i]-'a']++
+	}
+
+	for i := 0; i < len(s); i++ {
+		if count[s[i]-'a'] == 1 {
+			return i
+		}
+	}
+
+	return -1
+}
+
+// hash
+func firstUniqChar2(s string) int {
+	count := make(map[byte]int)
+
+	for i := 0; i < len(s); i++ {
+		count[s[i]-'a'] += 1
 	}
 
 	for i := 0; i < len(s); i++ {
