@@ -23,3 +23,8 @@ func Test2FirstUniqChar(t *testing.T) {
 	s := "leetcode"
 	fmt.Println(firstUniqChar2(s))
 }
+
+func Test3FirstUniqChar(t *testing.T) {
+	s := "leetcode"
+	fmt.Println(firstUniqChar3(s))
+}
