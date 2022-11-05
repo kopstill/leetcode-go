@@ -2,7 +2,6 @@
 package leetcode
 
 // 未优化的双指针
-// 双指针
 // 时间复杂度：O(N)。
 // 空间复杂度：O(1)。
 func reverseString(s []byte) {
