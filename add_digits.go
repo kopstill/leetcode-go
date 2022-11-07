@@ -35,3 +35,10 @@ func addDigits1(num int) int {
 	}
 	return num
 }
+
+// 数学
+// 时间复杂度：O(1)。
+// 空间复杂度：O(1)。
+func addDigits2(num int) int {
+	return (num-1)%9 + 1
+}
