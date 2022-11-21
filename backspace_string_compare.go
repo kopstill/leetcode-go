@@ -40,3 +40,22 @@ func backspaceCompare(s string, t string) bool {
 	}
 	return strings.ReplaceAll(s, "#", "") == strings.ReplaceAll(t, "#", "")
 }
+
+// 重构字符串
+// 时间复杂度：O(N+M)，其中 N 和 M 分别为字符串 S 和 T 的长度。我们需要遍历两字符串各一次。
+// 空间复杂度：O(N+M)，其中 N 和 M 分别为字符串 S 和 T 的长度。主要为还原出的字符串的开销。
+func backspaceCompare1(s string, t string) bool {
+	return build(s) == build(t)
+}
+
+func build(str string) string {
+	s := []byte{}
+	for i := range str {
+		if str[i] == '#' {
+			s = append(s, str[i])
+		} else if len(s) > 0 {
+			s = s[:len(s)-1]
+		}
+	}
+	return string(s)
+}
