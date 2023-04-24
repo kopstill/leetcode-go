@@ -1,6 +1,8 @@
 // 217: https://leetcode.cn/problems/contains-duplicate/
 package leetcode
 
+import "sort"
+
 // Hash
 // Time  complexity: O(n)
 // Space complexity: O(n)
@@ -25,6 +27,19 @@ func containsDuplicate1(nums []int) bool {
 			if nums[i] == nums[j] {
 				return true
 			}
+		}
+	}
+	return false
+}
+
+// Sort
+// Time  complexity: O(NlogN)
+// Space complexity: O(logN)
+func containsDuplicate2(nums []int) bool {
+	sort.Ints(nums)
+	for i := 1; i < len(nums); i++ {
+		if nums[i] == nums[i-1] {
+			return true
 		}
 	}
 	return false
