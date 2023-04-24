@@ -19,3 +19,8 @@ func Test2ContainsDuplicate(t *testing.T) {
 	nums := []int{1, 2, 3, 2, 2, 7, 0, 7}
 	fmt.Println(containsDuplicate2(nums))
 }
+
+func Test3ContainsDuplicate(t *testing.T) {
+	nums := []int{1, 2, 3, 4, 5, 6, 7}
+	fmt.Println(containsDuplicate3(nums))
+}

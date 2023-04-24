@@ -44,3 +44,17 @@ func containsDuplicate2(nums []int) bool {
 	}
 	return false
 }
+
+// Hash with empty struct
+// Time  complexity: O(N)
+// Space complexity: O(N)
+func containsDuplicate3(nums []int) bool {
+	set := map[int]struct{}{}
+	for _, v := range nums {
+		if _, has := set[v]; has {
+			return true
+		}
+		set[v] = struct{}{}
+	}
+	return false
+}
