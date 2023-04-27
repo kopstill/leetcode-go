@@ -26,3 +26,9 @@ with t as (
     select *, count(1) over(partition by employee_id) cnt from Employee
 )
 select employee_id,department_id from t where primary_flag = 'Y' or cnt = 1
+
+-- with rank
+with t as(
+    select *, row_number() over(partition by employee_id order by primary_flag) rk from Employee
+)
+select employee_id, department_id from t where rk = 1
