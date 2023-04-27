@@ -20,3 +20,9 @@ SELECT employee_id, department_id
 FROM Employee
 WHERE primary_flag='N'
 AND employee_id NOT IN (SELECT employee_id FROM Employee e WHERE primary_flag='Y')
+
+-- use a temp table
+with t as (
+    select *, count(1) over(partition by employee_id) cnt from Employee
+)
+select employee_id,department_id from t where primary_flag = 'Y' or cnt = 1
