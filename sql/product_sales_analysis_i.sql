@@ -9,3 +9,6 @@ select p.product_name, s.year, s.price from sales s left join product p on s.pro
 
 -- inner join
 select p.product_name, s.year, s.price from sales s, product p on s.product_id = p.product_id
+
+-- nature join with using
+select product_name, year, price from Sales join Product using(product_id)
